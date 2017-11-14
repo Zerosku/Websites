@@ -1,0 +1,63 @@
+body {
+    width: auto;
+}
+
+.upcenter {
+    background-color: darkmagenta;
+    color: #efefef;
+}
+
+.left {
+    background-color:darkorange;
+}
+
+.right {
+    background-color: darkgreen;
+}
+
+.downleft {
+    background-color: darkturquoise;
+}
+
+.downright {
+    background-color: chocolate;
+}
+
+.center {
+    background-color: red;
+}
+
+.boxparent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexbox {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 450px) {
+    .left, .right, .center {
+        width: 33.3%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .downleft {
+        width: 20%;
+    }
+    .downright {
+        width: 80%;
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .boxparent {
+        width: 1000px;
+        margin: auto;
+    }
+}

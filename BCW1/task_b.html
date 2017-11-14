@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task B</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <form novalidate class="mainForm">
+        <h1>Form validation HTML5</br>Task B</h1>
+        <br>
+        <br>
+        <h4>Choose what car you want and enter your information</h4>
+        <!-- your input elements here -->
+        <label>
+            <br>
+            <div id="mainselection">
+            <select name="cars">
+                <option value="nocar">No Car</option>
+                <option value="audi">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Subaru</option>
+                <option value="audi">Nissan</option>
+                <option value="audi">Chevrolet</option>
+                <option value="audi">Volkswagen</option>
+                <option value="audi">Lada</option>
+                <option value="audi">Ferrari</option>
+                <option value="audi">Audi</option>
+            </select>
+            </div>
+
+        </label>
+        <br><br>
+
+        <label>
+            <input type="text" id="firstname" name="firstname" placeholder="Your name.." required>
+        </label>
+        <br><br>
+
+        <label>
+            <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required>
+        </label>
+        <br><br>
+
+        <label>
+            <input type="email" id="email" name="email" placeholder="Email here" required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </label>
+        <br><br>
+
+        <label>
+            <input type="text" id="phone" name="phone" placeholder="+358..." required pattern="^\+[0-9]{5,}$">
+        </label>
+        <br><br>
+
+        <label>
+            <input type="text" name="address" placeholder="Address">
+        </label>
+        <br><br>
+
+        <label>
+            <input type="text" name="postal" pattern="^[0-9]{5}$" placeholder="Postal code">
+        </label>
+        <br><br>
+
+        <label>
+            <input type="password" placeholder="Password" required>
+        </label>
+        <br><br>
+
+        <label>
+            <input type="submit" name="submit" value="Submit">
+        </label>
+        <br>
+
+    </form>
+    <br>
+    <form class="gradient" action="task_a.html">
+        <button type="submit">To task A</button>
+    </form>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
