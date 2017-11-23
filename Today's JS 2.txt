@@ -1,0 +1,94 @@
+// main-a.js
+'use strict';
+// Create function 'loadHTML' which
+// adds the loaded HTML content to element defined by query
+const loadHTML = (query, url) => {
+  const element = document.querySelector(query);
+  fetch(url)
+  .then((response) => {
+    return response.text();
+  })
+  .then((text) => {
+    element.innerHTML = text;
+  });
+};
+
+loadHTML('ul', 'images.html');
+
+// main-b.js
+'use strict';
+// Create function 'showImages' which
+// loads images.json which has links to images as an array.
+
+// create a loop which builds the following HTML from every image in the array: 
+/*
+ <li>
+ <figure>
+ <a href="img/original/filename.jpg"><img src="img/thumbs/filename.jpg"></a>
+ <figcaption>
+ <h3>Title</h3>
+ </figcaption>
+ </figure>
+ </li>
+ */
+// After the loop print the HTML into <ul> element using innerHTML.
+const showImages = () => {
+  const ul = document.querySelector('ul');
+
+  fetch('images.json').then((response) => {
+    return response.json();
+  }).then((json) => {
+    let html = '';
+    json.forEach((image) => {
+      html +=
+          `<li>
+          <figure>
+            <a href="img/original/${image.mediaUrl}"><img src="img/thumbs/${image.mediaThumb}"></a>
+            <figcaption>
+                <h3>${image.mediaTitle}</h3>
+            </figcaption>
+          </figure>
+        </li>`;
+    });
+    ul.innerHTML = html;
+  });
+};
+
+showImages();
+
+
+// main-c.js
+'use strict';
+// Create function 'showImages' which
+// loads images.json which has links to images as an array.
+
+// create a loop which builds the following HTML from every image in the array: 
+/*
+<li>
+    <figure>
+        <a href="img/original/filename.jpg"><img src="img/thumbs/filename.jpg"></a>
+        <figcaption>
+            <h3>Title</h3>
+        </figcaption>
+    </figure>
+</li>
+*/
+// Make the above HTML by using DOM methods.
+// Create elements with createElement()
+// Add attributes with setAttribute()
+// Add elements with appendChild
+// Add text with createTextNode
+// When the above HTML is ready append it to the <ul> element
+const showImages = () => {
+  const ul = document.querySelector('ul');
+
+  fetch('images.json').then((response) => {
+    return response.json();
+  }).then((json) => {
+    json.forEach((image) => {
+     // put code here
+    });
+  });
+};
+
+showImages();
